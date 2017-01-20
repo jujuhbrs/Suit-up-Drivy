@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS/HTML Workshop with Drivy</title>
+    <link rel="stylesheet" href="styles.css"
+  </head>
+  <body>
+    <div id="titre">
+      <label>Rental Userform</label>
+    </div>
+    <div id="car">
+        <div id="thecar">
+        <label>The car</label>
+    </div>
+        <label>Car Model :<label/>
+        <input class="model"/>
+        <label>Price per day :<label/>
+        <input class="price-by-day" type="number"/>
+        <label>Price per km :<label/>
+        <input class="price-by-km" type="number"/>
+    </div>
+    <div id="rental">
+      <div id="therental">
+        <label>The rental</label>
+      </div>
+      <label>Begin date :<label/>
+      <input class="begin" type="date" />
+      <label>End date :<label/>
+      <input class="end" type="date" />
+      <label>Distance :<label/>
+      <input class="distance" type="number" />
+      <label>Deductible option<label/>
+      <input class="option" type="checkbox" />
+    </div>
+
+    <button id="compute">Compute</button>
+
+    <div id="actors"></div>
+    <script id="template" type="x-tmpl-mustache">
+      {{#actors}}
+        <div class="actor">
+          <span>{{who}}</span>
+          <span>{{type}}</span>
+          <span>{{amount}}</span>
+        </div>
+      {{/actors}}
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+    <script src="drivy.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
